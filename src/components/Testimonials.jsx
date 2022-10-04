@@ -34,7 +34,7 @@ const testimonials = [
 // Testimonial component
 function Testimonial({avatar, name, text}) {
   return (
-    <div className="flex flex-col items-center p-6 space-y-6 rounded-lg bg-veryLightGray md:w-1/3">
+    <div className="flex flex-col items-center p-6 space-y-6 rounded-lg bg-veryLightGray md:w-1/4">
       <img className="w-16 -mt-14" src={`/images/avatar-${avatar}.png`} alt="" />
       <h5 className="text-lg text-darkBlue font-bold">{name}</h5>
       <p className="text-sm text-darkGrayishBlue">{text}</p>
@@ -52,7 +52,7 @@ function Testimonials() {
         {/* <!-- Heading --> */}
         <h2 className="text-4xl font-bold text-center">What they’ve said</h2>
         {/* <!-- Testimonials container --> */}
-        <div className="flex flex-col mt-24 md:flex-row md:space-x-6">        
+        <div className="flex flex-col mt-24 space-y-12 md:flex-row md:space-x-6 md:space-y-0">        
           {testimonials.map(t => (<Testimonial avatar={t.avatar} name={t.name} text={t.text} />))}          
         </div>
         <div className="my-16">
